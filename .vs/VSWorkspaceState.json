@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WarehouseManagement",
+    "\\WarehouseManagement\\WarehouseManagement"
   ],
-  "SelectedNode": "\\C:\\Users\\Neal\\Source\\Repos\\nwire117\\SWENG421Final",
+  "SelectedNode": "\\WarehouseManagement\\WarehouseManagement\\Login.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
