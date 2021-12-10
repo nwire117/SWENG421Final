@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WarehouseManagement",
+    "\\WarehouseManagement\\WarehouseManagement"
   ],
-  "SelectedNode": "\\WarehouseManagement.sln",
+  "SelectedNode": "\\WarehouseManagement\\WarehouseManagement\\IProduct.cs",
   "PreviewInSolutionExplorer": false
 }
