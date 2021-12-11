@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Neal\\source\\repos\\nwire117\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj": {}
+    "C:\\Users\\Barry\\Source\\Repos\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Neal\\source\\repos\\nwire117\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj": {
+    "C:\\Users\\Barry\\Source\\Repos\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Neal\\source\\repos\\nwire117\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Barry\\Source\\Repos\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj",
         "projectName": "WarehouseManagement",
-        "projectPath": "C:\\Users\\Neal\\source\\repos\\nwire117\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj",
-        "packagesPath": "C:\\Users\\Neal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Neal\\source\\repos\\nwire117\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\obj\\",
+        "projectPath": "C:\\Users\\Barry\\Source\\Repos\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\WarehouseManagement.csproj",
+        "packagesPath": "C:\\Users\\Barry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barry\\Source\\Repos\\SWENG421Final\\WarehouseManagement\\WarehouseManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Neal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Barry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
