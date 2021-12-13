@@ -8,6 +8,9 @@ namespace WarehouseManagement
 {
     class Monitor : IProduct, IOrderElement
     {
+        private string name = "Monitor";
+        private double price = 149.99;
+        private string color = "black";
         public void addItem(IOrderElement item)
         {
             throw new NotImplementedException();
@@ -20,17 +23,22 @@ namespace WarehouseManagement
 
         public string getColor()
         {
-            throw new NotImplementedException();
+            return color;
         }
 
         public string getName()
         {
-            throw new NotImplementedException();
+            return name;
         }
 
         public double getPrice()
         {
-            throw new NotImplementedException();
+            return price;
+        }
+
+        public void setColor(string color)
+        {
+            this.color = color;
         }
     }
 }

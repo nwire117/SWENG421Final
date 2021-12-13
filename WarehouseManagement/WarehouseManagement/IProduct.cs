@@ -11,5 +11,7 @@ namespace WarehouseManagement
         public string getName();
         public double getPrice();
         public string getColor();
+
+        public void setColor(string color);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    class AbstractProductDecorator : IProduct, IOrderElement
+    public abstract class AbstractProductDecorator : IProduct, IOrderElement
 
     {
         private IProduct wrappedProduct;
@@ -32,6 +32,11 @@ namespace WarehouseManagement
         }
 
         public double getPrice()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IProduct.setColor(string color)
         {
             throw new NotImplementedException();
         }

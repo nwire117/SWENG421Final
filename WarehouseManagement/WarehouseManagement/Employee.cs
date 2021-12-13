@@ -34,13 +34,17 @@ namespace WarehouseManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int itemcount = (int)numericUpDown1.Value;
-            for(int i = 0; i < itemcount; i++)
+            if (!type.Equals(""))
             {
-                IProduct p = fact.createProduct(type);
-                inv.addItem(p);
-            }
-            label6.Text = inv.getCount(type).ToString();
+                int itemcount = (int)numericUpDown1.Value;
+                for (int i = 0; i < itemcount; i++)
+                {
+                    IProduct p = fact.createProduct(type);
+                    inv.addItem(p);
+                }
+                label6.Text = inv.getCount(type).ToString();
+            } 
+            numericUpDown1.Value = 0;
         }
     }
 }

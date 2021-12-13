@@ -52,6 +52,28 @@ namespace WarehouseManagement
             }
         }
 
+        public IProduct getItem(string item)
+        {
+            if (item.Equals("Monitor"))
+            {
+                return monitor[0];
+            }
+            if (item.Equals("Keyboard"))
+            {
+                return keyboard[0];
+            }
+            if (item.Equals("Mouse"))
+            {
+                return mouse[0];
+            }
+            else
+            {
+                return null;
+            }
+
+     
+        }
+
         public void removeItem(IOrderElement item)
         {
 

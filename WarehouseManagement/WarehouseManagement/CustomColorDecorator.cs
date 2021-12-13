@@ -9,15 +9,17 @@ namespace WarehouseManagement
     class CustomColorDecorator : AbstractProductDecorator
     {
        private IProduct wrappedProduct;
+       public double price;
 
         CustomColorDecorator(IProduct p)
         {
             this.wrappedProduct = p;
+            price = wrappedProduct.getPrice() + 5.99;
         }
 
-        public void setColor()
+        public void setColor(string color)
         {
-
+            wrappedProduct.setColor(color);
         }
     }
 }

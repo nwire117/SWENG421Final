@@ -13,10 +13,22 @@ namespace WarehouseManagement
     public partial class Login : Form
     {
         public Inventory inv = new Inventory();
+        
         public Login()
         {
             InitializeComponent();
-
+            for(int i = 0; i< 3; i++)
+            {
+                inv.addItem(new Monitor());
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                inv.addItem(new Mouse());
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                inv.addItem(new Keyboard());
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)

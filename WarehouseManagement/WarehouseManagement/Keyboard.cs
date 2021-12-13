@@ -8,6 +8,9 @@ namespace WarehouseManagement
 {
     class Keyboard : IProduct, IOrderElement
     {
+        private string name = "Keyboard";
+        private double price = 18.99;
+        private string color = "blue"; 
         public void addItem(IOrderElement item)
         {
             throw new NotImplementedException();
@@ -20,17 +23,22 @@ namespace WarehouseManagement
 
         public string getColor()
         {
-            throw new NotImplementedException();
+            return color;
         }
 
         public string getName()
         {
-            throw new NotImplementedException();
+            return name;
         }
 
         public double getPrice()
         {
-            throw new NotImplementedException();
+            return price;
+        }
+
+        public void setColor(string color)
+        {
+            this.color = color;
         }
     }
 }

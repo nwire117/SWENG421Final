@@ -34,5 +34,10 @@ namespace WarehouseManagement
         {
             throw new NotImplementedException();
         }
+
+        void IProduct.setColor(string color)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

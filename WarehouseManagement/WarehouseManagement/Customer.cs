@@ -13,16 +13,121 @@ namespace WarehouseManagement
     public partial class Customer : Form
     {
         public Inventory inv;
+        bool customized = false;
+        public string type;
+        IProduct prod;
         public Customer(Inventory inv)
         {
             InitializeComponent();
             this.inv = inv;
+            listBox1.Items.Add("Mouse");
+            listBox1.Items.Add("Keyboard");
+            listBox1.Items.Add("Monitor");
             label5.Text = " ";
+            label7.Text = "";
+            comboBox3.Items.Add("Mouse pad");
+            comboBox3.Items.Add("USB-C cable");
+            comboBox3.Items.Add("Screen clear kit");
+            comboBox2.Items.Add("Animal sticker set");
+            comboBox2.Items.Add("Superhero sticker set");
+            comboBox1.Items.Add("Yellow");
+            comboBox1.Items.Add("Orange");
+            comboBox1.Items.Add("Red");
+            comboBox1.Items.Add("White");
+            customize(customized);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            listBox2.Items.Remove(listBox2.SelectedItem);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            customized = false;
+            customize(customized);
+            prod = inv.getItem(listBox1.SelectedItem.ToString());
+            type = listBox1.SelectedItem.ToString();
+            label7.Text = inv.getCount(type).ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (customized)
+            {
+                customized = false;
+            }
+            else
+            {
+                customized = true;
+            }
+            customize(customized);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void customize(bool custom)
+        {
+            comboBox1.Visible = custom;
+            comboBox2.Visible = custom;
+            comboBox3.Visible = custom;
+            label8.Visible = custom;
+            label9.Visible = custom;
+            label10.Visible = custom;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string listing;
+            listing = prod.getName();
+            if (customized)
+            {
+                listing += " (custom) ";
+            }
+            else
+            {
+                listing += " ";
+            }
+            listing += prod.getPrice();
+            listBox2.Items.Add(listing);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
