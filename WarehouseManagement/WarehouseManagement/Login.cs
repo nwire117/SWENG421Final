@@ -24,7 +24,14 @@ namespace WarehouseManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form employee = new Employee();
+            employee.ShowDialog();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form customer = new Customer();
+            customer.ShowDialog();
         }
     }
 }

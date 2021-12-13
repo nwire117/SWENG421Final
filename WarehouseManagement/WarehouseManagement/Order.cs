@@ -28,7 +28,9 @@ namespace WarehouseManagement
 
         public Order nextState(int evnt)
         {
+            Order newOrder = new Order();
 
+            return newOrder;
         }
     }
 }

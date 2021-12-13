@@ -10,7 +10,7 @@ namespace WarehouseManagement
     {
         private int waitingReadLock;
         private int currentReadLock;
-        private List<> waitingWriteLock = new List<>();
+        private List<IProduct> waitingWriteLock = new List<IProduct>();
 
         public void readLock()
         {
