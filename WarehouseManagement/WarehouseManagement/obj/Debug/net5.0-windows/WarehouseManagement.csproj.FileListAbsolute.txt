@@ -36,3 +36,5 @@ C:\Users\Barry\Source\Repos\SWENG421Final\WarehouseManagement\WarehouseManagemen
 C:\Users\Barry\Source\Repos\SWENG421Final\WarehouseManagement\WarehouseManagement\bin\Debug\net5.0-windows\ref\WarehouseManagement.dll
 C:\Users\Barry\Source\Repos\SWENG421Final\WarehouseManagement\WarehouseManagement\bin\Debug\net5.0-windows\WarehouseManagement.pdb
 C:\Users\Barry\Source\Repos\SWENG421Final\WarehouseManagement\WarehouseManagement\obj\Debug\net5.0-windows\WarehouseManagement.genruntimeconfig.cache
+C:\Users\Neal\source\repos\nwire117\SWENG421Final\WarehouseManagement\WarehouseManagement\obj\Debug\net5.0-windows\WarehouseManagement.Customer.resources
+C:\Users\Neal\source\repos\nwire117\SWENG421Final\WarehouseManagement\WarehouseManagement\obj\Debug\net5.0-windows\WarehouseManagement.Employee.resources

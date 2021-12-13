@@ -12,11 +12,17 @@ namespace WarehouseManagement
 {
     public partial class Customer : Form
     {
-        public Customer()
+        public Inventory inv;
+        public Customer(Inventory inv)
         {
             InitializeComponent();
-
+            this.inv = inv;
             label5.Text = " ";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    class Product1 : IProduct, IOrderElement
+    class Monitor : IProduct, IOrderElement
     {
         public void addItem(IOrderElement item)
         {

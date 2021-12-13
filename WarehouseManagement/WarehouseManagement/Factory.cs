@@ -10,7 +10,7 @@ namespace WarehouseManagement
     {
         public IProduct createProduct(string type)
         {
-            Type t = Type.GetType(type);
+            Type t = Type.GetType("WarehouseManagement." + type);
             Object o = Activator.CreateInstance(t);
             IProduct p = (IProduct)o;
 

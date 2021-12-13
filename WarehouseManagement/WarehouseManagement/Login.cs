@@ -12,9 +12,11 @@ namespace WarehouseManagement
 {
     public partial class Login : Form
     {
+        public Inventory inv = new Inventory();
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -24,13 +26,13 @@ namespace WarehouseManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form employee = new Employee();
+            Form employee = new Employee(inv);
             employee.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form customer = new Customer();
+            Form customer = new Customer(inv);
             customer.ShowDialog();
         }
     }
