@@ -41,6 +41,7 @@ namespace WarehouseManagement
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +140,7 @@ namespace WarehouseManagement
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 139);
             this.listBox2.TabIndex = 10;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -148,6 +150,7 @@ namespace WarehouseManagement
             this.button2.TabIndex = 12;
             this.button2.Text = "Process";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -155,15 +158,26 @@ namespace WarehouseManagement
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 23);
             this.button3.TabIndex = 13;
-            this.button3.Text = "View Orders";
+            this.button3.Text = "View Order";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(652, 317);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Ship";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 447);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox2);
@@ -199,5 +213,6 @@ namespace WarehouseManagement
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -44,8 +44,8 @@ namespace WarehouseManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Remove(listBox2.SelectedItem);
             order.orderItems.RemoveAt(listBox2.SelectedIndex);
+            listBox2.Items.Remove(listBox2.SelectedItem);   
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -136,7 +136,13 @@ namespace WarehouseManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            foreach(string item in listBox2.Items)
+            {
+                inv.removeItem(item);
+            }
+            label7.Text = inv.getCount(type).ToString();
+            listBox2.Items.Clear();
+            label5.Text = "Pending";
         }
 
         public void addExtras()

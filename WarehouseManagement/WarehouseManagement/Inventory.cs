@@ -74,9 +74,20 @@ namespace WarehouseManagement
      
         }
 
-        public void removeItem(IOrderElement item)
+        public void removeItem(string item)
         {
-
+            if (item.Contains("Monitor"))
+            {
+                monitor.RemoveAt(0);
+            }
+            if (item.Contains("Keyboard"))
+            {
+               keyboard.RemoveAt(0);
+            }
+            if (item.Contains("Mouse"))
+            {
+                mouse.RemoveAt(0);
+            }
         }
     }
 }

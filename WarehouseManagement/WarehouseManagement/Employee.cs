@@ -25,6 +25,7 @@ namespace WarehouseManagement
             listBox1.Items.Add("Monitor");
             listBox2.Visible = false;
             button2.Visible = false;
+            button4.Visible = false;
             this.inv = inv;
             this.order = order;
         }
@@ -63,6 +64,28 @@ namespace WarehouseManagement
                 listBox2.Visible = false;
                 button2.Visible = false;
             }
+
+            foreach(IProduct p in order.orderItems)
+            {
+                listBox2.Items.Add(p.getName() + " " + Math.Round(p.getPrice(), 2));
+            }
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button4.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            button4.Visible = false;
+            listBox2.Items.Clear();
+            order.orderItems.Clear();
         }
     }
 }
