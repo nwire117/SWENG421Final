@@ -6,20 +6,34 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    class CustomColorDecorator : AbstractProductDecorator
+    public class CustomColorDecorator : AbstractProductDecorator
     {
        private IProduct wrappedProduct;
        public double price;
+        private string name;
+        private string color;
 
-        CustomColorDecorator(IProduct p)
+        public CustomColorDecorator(IProduct p)
         {
             this.wrappedProduct = p;
-            price = wrappedProduct.getPrice() + 5.99;
+            this.price = wrappedProduct.getPrice() + 5.99;
+            this.name = wrappedProduct.getName();
+            this.color = wrappedProduct.getColor();
         }
 
-        public void setColor(string color)
+        public override void setColor(string color)
         {
             wrappedProduct.setColor(color);
+        }
+
+        public override string getName()
+        {
+            return name;
+        }
+
+        public override double getPrice()
+        {
+            return price;
         }
     }
 }

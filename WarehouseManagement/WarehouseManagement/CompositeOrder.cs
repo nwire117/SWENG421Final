@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    class CompositeOrder : IProduct, IOrderElement
+    public class CompositeOrder : IProduct, IOrderElement
     {
-        public List<IOrderElement> orderItems = new List<IOrderElement>();
+        public List<IProduct> orderItems = new List<IProduct>();
+
+        public void addItem(IProduct item)
+        {
+            orderItems.Add(item);
+        }
 
         public void addItem(IOrderElement item)
         {

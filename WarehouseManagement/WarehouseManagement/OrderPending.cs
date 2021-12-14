@@ -9,7 +9,5 @@ namespace WarehouseManagement
     class OrderPending : Order
     {
         private Order parent;
-
-       
     }
 }

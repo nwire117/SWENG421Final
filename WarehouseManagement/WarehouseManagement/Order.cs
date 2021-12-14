@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    class Order : CompositeOrder
+    public class Order : CompositeOrder
     {
-        public Inventory inventory = new Inventory();
-        OrderPending pending = new OrderPending();
-        OrderProcessed processed = new OrderProcessed();
-        OrderShipped shipped = new OrderShipped();
+
+        OrderPending pending;
+        OrderProcessed processed;
+        OrderShipped shipped;
         public int pendingEvent;
         public int processedEvent;
         public int shippedEvent;
@@ -29,7 +29,6 @@ namespace WarehouseManagement
         public Order nextState(int evnt)
         {
             Order newOrder = new Order();
-
             return newOrder;
         }
     }

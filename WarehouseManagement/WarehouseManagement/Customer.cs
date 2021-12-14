@@ -13,13 +13,18 @@ namespace WarehouseManagement
     public partial class Customer : Form
     {
         public Inventory inv;
+        public Order order;
         bool customized = false;
+        bool customcolor = false;
+        bool decals = false;
+        bool accessory = false;
         public string type;
-        IProduct prod;
-        public Customer(Inventory inv)
+        public IProduct prod;
+        public Customer(Inventory inv, Order order)
         {
             InitializeComponent();
             this.inv = inv;
+            this.order = order;
             listBox1.Items.Add("Mouse");
             listBox1.Items.Add("Keyboard");
             listBox1.Items.Add("Monitor");
@@ -27,7 +32,7 @@ namespace WarehouseManagement
             label7.Text = "";
             comboBox3.Items.Add("Mouse pad");
             comboBox3.Items.Add("USB-C cable");
-            comboBox3.Items.Add("Screen clear kit");
+            comboBox3.Items.Add("Screen cleaner kit");
             comboBox2.Items.Add("Animal sticker set");
             comboBox2.Items.Add("Superhero sticker set");
             comboBox1.Items.Add("Yellow");
@@ -40,6 +45,7 @@ namespace WarehouseManagement
         private void button3_Click(object sender, EventArgs e)
         {
             listBox2.Items.Remove(listBox2.SelectedItem);
+            order.orderItems.RemoveAt(listBox2.SelectedIndex);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -86,7 +92,7 @@ namespace WarehouseManagement
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            accessory = true;
         }
 
         public void customize(bool custom)
@@ -102,6 +108,7 @@ namespace WarehouseManagement
         private void button1_Click(object sender, EventArgs e)
         {
             string listing;
+            addExtras();
             listing = prod.getName();
             if (customized)
             {
@@ -111,23 +118,42 @@ namespace WarehouseManagement
             {
                 listing += " ";
             }
-            listing += prod.getPrice();
+            listing += Math.Round(prod.getPrice(), 2);
             listBox2.Items.Add(listing);
+            order.orderItems.Add(prod);
+            prod = inv.getItem(listBox1.SelectedItem.ToString());
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            customcolor = true;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            decals = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        public void addExtras()
+        {
+            if (customcolor)
+            {
+                prod = new CustomColorDecorator(prod);
+                prod.setColor(comboBox1.SelectedItem.ToString());
+            }
+            if (decals)
+            {
+                prod = new DecalDecorator(prod);
+            }
+            if (accessory)
+            {
+                prod = new AccessoryDecorator(prod);
+            }
         }
     }
 }

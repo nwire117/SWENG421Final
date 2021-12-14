@@ -14,15 +14,19 @@ namespace WarehouseManagement
     {
         public string type = "";
         public Inventory inv;
+        public Order order;
         Factory fact = new Factory();
-        public Employee(Inventory inv)
+        public Employee(Inventory inv, Order order)
         {
             InitializeComponent();
             label6.Text = " ";
             listBox1.Items.Add("Mouse");
             listBox1.Items.Add("Keyboard");
             listBox1.Items.Add("Monitor");
+            listBox2.Visible = false;
+            button2.Visible = false;
             this.inv = inv;
+            this.order = order;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +49,20 @@ namespace WarehouseManagement
                 label6.Text = inv.getCount(type).ToString();
             } 
             numericUpDown1.Value = 0;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!listBox2.Visible)
+            {
+                listBox2.Visible = true;
+                button2.Visible = true;
+            }
+            else
+            {
+                listBox2.Visible = false;
+                button2.Visible = false;
+            }
         }
     }
 }
