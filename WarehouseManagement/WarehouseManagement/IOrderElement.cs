@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WarehouseManagement
 {
-    interface IOrderElement
+    public interface IOrderElement
     {
         public void addItem(IOrderElement item);
         public void deleteItem(IOrderElement item);
