@@ -9,12 +9,7 @@ namespace WarehouseManagement
     public class Order : CompositeOrder
     {
 
-        OrderPending pending;
-        OrderProcessed processed;
-        OrderShipped shipped;
-        public int pendingEvent;
-        public int processedEvent;
-        public int shippedEvent;
+        public AbstractOrderStatus status;
 
         public void purchase()
         {

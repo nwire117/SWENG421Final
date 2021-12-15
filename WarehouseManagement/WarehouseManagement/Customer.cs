@@ -142,7 +142,10 @@ namespace WarehouseManagement
             }
             label7.Text = inv.getCount(type).ToString();
             listBox2.Items.Clear();
-            label5.Text = "Pending";
+            order.nextState(1);
+            order.status = new OrderPending();
+            order.status.enter();
+            label5.Text = order.status.orderStatus;
         }
 
         public void addExtras()

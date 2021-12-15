@@ -79,6 +79,8 @@ namespace WarehouseManagement
         private void button2_Click(object sender, EventArgs e)
         {
             button4.Visible = true;
+            order.status.nextState(2);
+            order.status.enter();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -86,6 +88,8 @@ namespace WarehouseManagement
             button4.Visible = false;
             listBox2.Items.Clear();
             order.orderItems.Clear();
+            order.status.nextState(3);
+            order.status.enter();
         }
     }
 }
